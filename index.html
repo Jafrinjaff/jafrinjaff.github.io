@@ -1,73 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jafrin A | Data Analyst Portfolio</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0d1117;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #161b22;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-        section {
-            padding: 20px;
-        }
-        .project-box {
-            background-color: #21262d;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-        }
-        a {
-            color: #58a6ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jafrin Jaff — Data Analyst Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0f12; --card:#0f1417; --accent:#2bb7ff; --muted:#9aa4ad;
+      --maxw:1100px; --mono: 'Segoe UI', Roboto, Arial, sans-serif;
+    }
+    html,body{height:100%;margin:0;font-family:var(--mono);background:var(--bg);color:#e9eef2}
+    a{color:var(--accent)}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:36px 18px}
+    header{padding:30px 0;text-align:center}
+    header h1{font-size:36px;margin:0 0 6px}
+    header p{color:var(--muted);margin:0 0 12px}
+    .hero{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:22px;border-radius:10px;margin-bottom:18px;border:1px solid #192025}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:14px}
+    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,8,0.6);border:1px solid #1f2830}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{color:var(--muted);margin:0 0 12px;font-size:14px}
+    .cta{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#001;border:0;text-decoration:none;font-weight:700}
+    #about{margin-top:14px;color:var(--muted);line-height:1.6}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+    .small{font-size:13px;color:var(--muted)}
+    .top-right{position:fixed;right:20px;top:16px}
+    .resume-btn{background:#151a1e;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;border:1px solid #272e33}
+    /* responsive */
+    @media(max-width:700px){
+      header h1{font-size:26px}
+      .wrap{padding:20px}
+    }
+  </style>
 </head>
-
 <body>
+  <div class="top-right">
+    <a class="resume-btn" href="resume.pdf" target="_blank">Download Resume</a>
+  </div>
 
-<header>
-    <h1>Jafrin A – Data Analyst Portfolio</h1>
-    <p>SQL | Python | Excel | Power BI | Tableau</p>
-</header>
+  <div class="wrap">
+    <header id="top">
+      <h1>Jafrin Jaff — Data Analyst</h1>
+      <p>SQL • Tableau • Excel • Power BI • Python</p>
+      <div class="meta">Email: <a href="mailto:jafrinsuresh1@gmail.com">jafrinsuresh1@gmail.com</a> · LinkedIn: <a href="http://linkedin.com/in/jafrin07" target="_blank">jafrin07</a></div>
+    </header>
 
-<section>
-    <h2>📌 About Me</h2>
-    <p>I am a Data Analyst skilled in SQL, Python, Excel, Power BI, and Tableau. 
-    I enjoy analyzing data, building dashboards, and creating end-to-end analytics projects.</p>
-</section>
+    <section class="hero card">
+      <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+        <div style="flex:1;min-width:180px">
+          <h2 style="margin:0 0 6px">About Me</h2>
+          <p id="about">I am a Data Analyst skilled in SQL, Tableau, Excel, Power BI & Python. I analyze data end-to-end — from cleaning and modelling to visualization and storytelling.</p>
+        </div>
+        <div style="min-width:200px;text-align:right">
+          <a class="cta" href="#projects">View Projects</a>
+        </div>
+      </div>
+    </section>
 
-<section>
-    <h2>📂 My Projects</h2>
+    <section id="projects">
+      <h2 style="margin:10px 0">My Projects</h2>
+      <div class="projects">
+        <article class="card">
+          <h3>OTT Analytics Project</h3>
+          <p>End-to-end OTT analytics using SQL & Tableau: monthly revenue, top binge watchers, genre watch time, device usage, and completion rate dashboards.</p>
+          <p class="small">Tools: MySQL, Tableau, GitHub</p>
+          <a class="cta" href="https://github.com/Jafrinjaff/OTT-Analytics-project" target="_blank">View Project →</a>
+        </article>
 
-    <div class="project-box">
-        <h3>📊 OTT Analytics Project</h3>
-        <p>End-to-end OTT analytics using SQL & Tableau.</p>
-        <a href="https://github.com/Jafrinjaff/OTT-Analytics-project" target="_blank">View Project →</a>
-    </div>
+        <!-- Placeholder card for future project -->
+        <article class="card">
+          <h3>Excel Sales Dashboard</h3>
+          <p>Interactive sales KPI dashboard built in Excel using pivot tables and charts (coming soon).</p>
+          <p class="small">Tools: Excel, Power Query</p>
+          <a class="cta" href="#" onclick="alert('Coming soon')">Coming Soon</a>
+        </article>
 
-</section>
+      </div>
+    </section>
 
-<section>
-    <h2>📞 Contact</h2>
-    <p>Email: <b>jafrinsuresh1@gmail.com</b></p>
-    <p>Phone number: <b>9345568767</b></p>
-</section>
+    <section id="contact" style="margin-top:30px">
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:jafrinsuresh1@gmail.com">jafrinsuresh1@gmail.com</a></p>
+        <p>LinkedIn: <a href="http://linkedin.com/in/jafrin07" target="_blank">linkedin.com/in/jafrin07</a></p>
+        <p>Phone number: <a href="9345568767">9345568767</a></p>
+      </div>
+    </section>
 
+    <footer style="margin:28px 0;text-align:center;color:var(--muted)">
+      © Jafrin Jaff · Data Analyst Portfolio · Hosted on GitHub Pages
+    </footer>
+  </div>
 </body>
 </html>
